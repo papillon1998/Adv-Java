@@ -1,5 +1,6 @@
 package functional_programming.stream;
 
+import java.awt.print.Pageable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,7 +9,27 @@ import java.util.List;
 public class EmployeeFactory {
 
     ArrayList<Employee> employees = new ArrayList<>();
+    List<Project> projects = new ArrayList<>();
 
+    public List<Project> getAllProjects(){
+
+        Project Delta = new Project("Delta Model", "Login", "Robert Downey Jr");
+        Project Beta = new Project("Beta Enhancement", "Authentication", "Chris");
+        Project TwoFactorAuth = new Project("Two Factor Authentication", "Authentication", "MSD");
+        Project CommonUI = new Project("Common UI", "UI", "Robert Downey Jr");
+        Project Pegasus = new Project("Pegasus Model", "Data", "Vikram");
+        Project CustomerOnboarding = new Project("Customer Onboarding", "Ads", "Vedha");
+        Project Verification = new Project("Source Verification", "Data", "Pablo");
+        Project RemoveUsers = new Project("Remove Invalid User", "Proxy", "Jeetu");
+        Project SiteReliability = new Project("Site Reliability", "Admin", "Zaheer Khan");
+        Project DataTransition = new Project("Data Transition", "Data", "Atif Aslam");
+        Project TwoPhaseDeployment =new Project("Two Phase Deployment", "Deployment", "Shaktiman");
+
+        projects.addAll(Arrays.asList(Delta, Beta, TwoFactorAuth , CommonUI, Pegasus, CustomerOnboarding, Verification, RemoveUsers, SiteReliability,
+                DataTransition, TwoPhaseDeployment));
+
+        return projects;
+    }
 
     public List<Employee> getAllEmployee(){
 
