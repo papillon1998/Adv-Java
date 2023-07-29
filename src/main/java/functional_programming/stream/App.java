@@ -9,10 +9,6 @@ import java.util.stream.Collectors;
 
 public class App {
 
-    public static void main(String[] args) throws Exception {
-
-    }
-
     /*1. List all distinct project in non-ascending order. */
     Function<List<Employee>, Set<Project>> getDistinctProjects  = employeeList ->
             employeeList.stream()
