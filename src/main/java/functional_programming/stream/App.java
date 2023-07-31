@@ -29,4 +29,15 @@ public class App {
                     .filter(emp -> emp.getId().substring(0,4).equals(year))
                     .collect(Collectors.toList());
 
+/* 4. Sort employees based on firstName, for same firstName sort by salary.
+    -> + sortEmployeesByFNameThenSalary(List<Employee> employees):List<Employee>
+    ->
+
+*/
+
+    Function<List<Employee>, List<Employee>> sortEmployeesByNameThenSalary =
+            employees -> employees.stream()
+                    .sorted(Comparator.comparing(Employee::getFirstName).thenComparing(Employee::getSalary))
+                    .collect(Collectors.toList());
+
 }
