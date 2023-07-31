@@ -70,9 +70,11 @@ public class AppTest {
     }
 
 
-    @Test
-    void TestSortEmployeesByNameThenSalary() {
-        List<Employee> actual = app.sortEmployeesByNameThenSalary.apply(employeeFactory.getAllEmployee());
+@Test
+void testSortEmployeesByNameThenSalary() {
+    List<Employee> actual = app.sortEmployeesByNameThenSalary.apply(employeeFactory.getAllEmployee());
+
+    List<Employee> employees = new ArrayList<>();
 
         List<Employee> employees = new ArrayList<>();
 
