@@ -8,7 +8,6 @@ import java.util.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AppTest {
-
     private App app;
     EmployeeFactory employeeFactory;
     @BeforeEach
@@ -49,12 +48,12 @@ public class AppTest {
 
 
     @Test
-    void  TestEmployeesNameStartingWithA() {
+    void  testEmployeesNameStartingWithA() {
         app.employeesNameStartingWithA.accept(employeeFactory.getAllEmployee());
     }
 
     @Test
-    void TestGetEmployeesJoinedInYear() {
+    void testGetEmployeesJoinedInYear() {
         List<Employee> actual = app.getEmployeesJoinedInYear.apply(employeeFactory.getAllEmployee(), "2023");
 
         Project Pegasus = new Project("Pegasus Model", "Data", "Vikram");
@@ -70,11 +69,9 @@ public class AppTest {
     }
 
 
-@Test
-void testSortEmployeesByNameThenSalary() {
-    List<Employee> actual = app.sortEmployeesByNameThenSalary.apply(employeeFactory.getAllEmployee());
-
-    List<Employee> employees = new ArrayList<>();
+    @Test
+    void testSortEmployeesByNameThenSalary() {
+        List<Employee> actual = app.sortEmployeesByNameThenSalary.apply(employeeFactory.getAllEmployee());
 
         List<Employee> employees = new ArrayList<>();
 
@@ -101,7 +98,7 @@ void testSortEmployeesByNameThenSalary() {
         employees.add(new Employee("2013Emp0872", "Sanjay", "Singhania", 2200000, 3, Arrays.asList(Pegasus, Delta, RemoveUsers, DataTransition)));
         employees.add(new Employee("2023Emp0934", "Shruti", "Sen", 1100000, 1, Arrays.asList(Pegasus)));
 
-assertEquals(employees, actual);
+        assertEquals(employees, actual);
     }
 
 
