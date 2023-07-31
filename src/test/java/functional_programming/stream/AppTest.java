@@ -101,11 +101,7 @@ void testSortEmployeesByNameThenSalary() {
         employees.add(new Employee("2013Emp0872", "Sanjay", "Singhania", 2200000, 3, Arrays.asList(Pegasus, Delta, RemoveUsers, DataTransition)));
         employees.add(new Employee("2023Emp0934", "Shruti", "Sen", 1100000, 1, Arrays.asList(Pegasus)));
 
-        assertEquals(actual.get(0), employees.get(0));
-        assertEquals(actual.get(1), employees.get(1));
-        assertEquals(actual.get(2), employees.get(2));
-        assertEquals(actual.get(3), employees.get(3));
-        assertEquals(actual.get(9), employees.get(9));
+assertEquals(employees, actual);
     }
 
 
