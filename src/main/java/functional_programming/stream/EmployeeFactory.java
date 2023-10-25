@@ -1,6 +1,5 @@
 package functional_programming.stream;
 
-import java.awt.print.Pageable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
