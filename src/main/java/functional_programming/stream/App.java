@@ -2,6 +2,7 @@ package functional_programming.stream;
 
 
 import java.util.*;
+import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -34,5 +35,24 @@ public class App {
             employees -> employees.stream()
                     .sorted(Comparator.comparing(Employee::getFirstName).thenComparing(Employee::getSalary))
                     .collect(Collectors.toList());
+
+
+/*5. Print names of all employee with 3rd highest salary. (generalise it for nth highest salary).
+
+    - Get the distinct salaries of all employees.
+    - Sort the salaries in descending order.
+    - Get the nth highest salary from the sorted list.
+    - Filter the employees whose salary matches the nth highest salary.
+    - Print the names of those employees.
+*/
+
+
+    BiConsumer<List<Employee>, Integer> getEmployeesWithNthHighestSalary =
+            (employees, n)-> employees.stream()
+                    .filter(employee -> employee.getSalary() == employees.stream()
+                            .sorted(Comparator.comparing(Employee::getSalary).reversed())
+                            .collect(Collectors.toList()).get(n-1).getSalary())
+                    .forEach(employee -> System.out.println(employee.getFirstName()+ " " + employee.getLastName()));
+
 
 }

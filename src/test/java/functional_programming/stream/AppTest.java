@@ -101,6 +101,12 @@ public class AppTest {
         assertEquals(employees, actual);
     }
 
+    @Test
+    void TestGetEmployeesWithNthHighestSalary() {
+        app.getEmployeesWithNthHighestSalary.accept(employeeFactory.getAllEmployee(), 1);
+
+    }
+
 
 
 
