@@ -1,4 +1,4 @@
-package src.substitution_principle;
+package substitution_principle;
 
 import java.util.ArrayList;
 import java.util.List;
